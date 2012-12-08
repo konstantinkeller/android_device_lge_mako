@@ -42,7 +42,7 @@ PRODUCT_PACKAGES += \
         VisualizationWallpapers \
         librs_jni
 
-LOCAL_KERNEL := device/lge/mako-kernel/kernel
+LOCAL_KERNEL := device/lge/mako/kernel
 
 PRODUCT_COPY_FILES := \
 	$(LOCAL_KERNEL):kernel
@@ -246,6 +246,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	persist.sys.usb.config=mtp
+
+PRODUCT_PROPERTY_OVERRIDES += \
+	dalvik.vm.dexopt-data-only=1
 
 # for bugmailer
 PRODUCT_PACKAGES += send_bug
